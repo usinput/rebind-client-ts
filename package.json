@@ -1,0 +1,61 @@
+{
+  "name": "@rebind.gg/client-ts",
+  "version": "0.1.0",
+  "description": "TypeScript client for the Rebind Remote Access WebSocket protocol. Typed, auto-reconnecting, zero runtime dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "server",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "US Input Company",
+    "email": "inquiries@usinput.com",
+    "url": "https://usinput.com"
+  },
+  "homepage": "https://rebind.gg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usinput/rebind-client-ts",
+    "directory": "packages/client-ts"
+  },
+  "bugs": {
+    "email": "support@rebind.gg"
+  },
+  "keywords": [
+    "rebind",
+    "websocket",
+    "remote-control",
+    "hid",
+    "automation",
+    "input",
+    "keyboard",
+    "mouse"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test tests/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
